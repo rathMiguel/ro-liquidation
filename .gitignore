@@ -1,0 +1,11 @@
+.sass-cache/
+node_modules/
+
+bower_components/
+
+Thumbs.db
+*.LCK
+prepros.cfg
+
+_notes/
+dist/
