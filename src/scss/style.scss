@@ -1,7 +1,19 @@
 @charset "utf-8";
 
-@import "mixins/mixins";
+// @import "mixins/mixins";
 @import "vars/settings";
 @import "compass";
 @import "madia_query/media_queries";
 
+body{
+	padding-top: 50px;
+	font-family: $ja_go;
+}
+
+main{
+	margin-top: 50px;
+}
+
+.text-big{
+	font-size: 2em;
+}

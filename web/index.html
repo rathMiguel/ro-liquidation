@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="ja" ng-app>
+<html lang="ja" ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="application/javascript" src="js/angular-min.js"></script>
     <script type="application/javascript" src="js/ctrl.js"></script>
     <title>RO清算用割り勘計算機</title>
   </head>
-  <body></body>
+  <body ng-controller="myController">
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <div>
+              <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="" class="navbar-brand">RO清算計算機</a>
+            </div>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <p>一人あたり<span class="text-big">{{money / member | number:0}}</span>zenyです</p>
+        <dl>
+          <dt>割る人数</dt>
+          <dd>
+            <input type="number" min="1" max="12" ng-model="member" class="form-control">
+          </dd>
+          <dt>お金</dt>
+          <dd>
+            <input type="number" ng-model="money" class="form-control">
+          </dd>
+        </dl>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>

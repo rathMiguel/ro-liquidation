@@ -1,7 +1,8 @@
 doctype
-html(lang="ja" ng-app)
+html(lang="ja" ng-app="myApp")
 	head
 		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
 		link(rel="stylesheet", href="bootstrap/css/bootstrap-theme.min.css")
 		link(rel="stylesheet", href="css/style.css")
@@ -9,7 +10,32 @@ html(lang="ja" ng-app)
 		script(type="application/javascript", src="js/angular-min.js")
 		script(type="application/javascript", src="js/ctrl.js")
 		title RO清算用割り勘計算機
-	body
+	body(ng-controller="myController")
 		header
+			nav.navbar.navbar-inverse.navbar-fixed-top
+				.container
+					.navbar-header
+						div
+							button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href="") RO清算計算機
+					#navbar.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							li
+								a(href="#") About
 		main
+			.container
+				p 一人あたり
+					span.text-big {{money / member | number:0}}
+					|zenyです
+				dl
+					dt 割る人数
+					dd
+						input.form-control(type="number" min="1" max="12" ng-model="member")
+					dt お金
+					dd
+						input.form-control(type="number" ng-model="money")
 		footer
