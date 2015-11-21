@@ -1,7 +1,7 @@
 {
-  "name": "vzone",
-  "version": "1.0.0",
-  "description": "VZONE用開発環境の構築ファイルです",
+  "name": "neue-component",
+  "version": "1.2.0",
+  "description": "development: website of M-Techno",
   "main": "gulpfile.js",
   "directories": {
     "doc": "doc"
@@ -10,14 +10,23 @@
     "gulp": "^3.8.10"
   },
   "devDependencies": {
+    "browser-sync": "^2.5.3",
+    "frontnote": "^0.1.2",
+    "gulp-clean": "^0.3.1",
     "gulp-combine-media-queries": "^0.2.0",
     "gulp-compass": "^2.0.3",
+    "gulp-concat": "^2.4.3",
+    "gulp-ejs": "^1.1.0",
+    "gulp-frontnote": "^1.0.1",
     "gulp-imagemin": "^2.1.0",
-    "gulp-open": "^0.3.2",
+    "gulp-jade": "^0.11.0",
+    "gulp-minify-css": "^0.4.5",
     "gulp-pleeease": "^1.1.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-prettify": "^0.3.0",
     "gulp-sass": "^1.3.2",
-    "gulp-webserver": "^0.9.0"
+    "gulp-uglify": "^1.1.0",
+    "run-sequence": "^1.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
